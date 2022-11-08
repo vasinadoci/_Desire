@@ -1,0 +1,360 @@
+/* =====================Breadcrumbs=================== */
+/*====== Стили для breadcrumbs см в _breadcrumbs.scss */
+
+/* ==================About-hero=============== */
+.about-hero {
+   background: url('../img/about-page-images/about-hero.jpg') no-repeat;
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+   padding-top: calc(90px + (160 - 90) * (100vw - 350px) / (1920 - 350));
+   padding-bottom: calc(90px + (160 - 90) * (100vw - 350px) / (1920 - 350));
+   @include flex-column-block();
+   @include jc-c__ai-c();
+}
+
+.about-hero__heading {
+
+   h2,
+   .about-hero__title {
+      font-family: $font-f-secondary;
+      font-style: normal;
+      font-weight: 700;
+      font-size: calc(30px + (60 - 30) * (100vw - 350px) / (1920 - 350));
+      line-height: 133%; //80px     
+      color: $text-title-color;
+   }
+}
+
+
+
+
+/* ==================Promo================== */
+.promo {
+   padding-top: calc(40px + (130 - 40) * (100vw - 350px) / (1920 - 350));
+   padding-bottom: calc(40px + (60 - 40) * (100vw - 350px) / (1920 - 350));
+}
+
+.promo__body {
+   @include flex-column-block();
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+
+   .promo__heading {
+      width: 72.6%;
+      -ms-flex-item-align: start;
+      align-self: start;
+
+      @media (max-width:767.98px) {
+         width: 100%;
+      }
+
+      @media (max-width:575.98px) {
+         -ms-flex-item-align: center;
+         align-self: center;
+         text-align: center;
+      }
+
+      h2,
+      .promo__title {
+         @include title-h2();
+      }
+
+      .promo__line {
+         @include header-line();
+
+         @media (max-width:575.98px) {
+            margin: 20px auto 20px auto;
+         }
+      }
+   }
+
+   .promo__desc {
+      width: 73%;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+
+      @media (max-width:767.98px) {
+         width: 100%;
+      }
+
+      p,
+      .promo__text {
+         @include basic-text();
+         margin: 0px 0px 20px 0px;
+
+         @media (max-width:575.98px) {
+            -ms-flex-item-align: center;
+            align-self: center;
+         }
+      }
+   }
+}
+
+/* ==============About-video============= */
+
+.about__video {
+   padding-bottom: calc(40px + (60 - 40) * (100vw - 350px) / (1920 - 350));
+}
+
+.embed,
+.fr-video {
+   position: relative;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      display: block;
+      padding-top: 21.5%;
+
+      @media (max-width:1200px) {
+         padding-top: 46.25%;
+      }
+
+      @media (max-width:767.98px) {
+         padding-top: 66.25%;
+      }
+   }
+
+   iframe,
+   video,
+   object,
+   embed {
+
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+   }
+}
+
+
+.details {}
+
+.details__body {
+   background: url('../img/about-page-images/background-details.svg') no-repeat;
+   //background-position: center;
+   background-size: cover;
+   width: 100%;
+   @include flex-row-block();
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   padding-top: 45px;
+   padding-bottom: 50px;
+   padding-left: calc(40px + (177 - 40) * (100vw - 1150px) / (1920 - 1150));
+   padding-right: calc(40px + (400 - 40) * (100vw - 1150px) / (1920 - 1150));
+
+   @media (max-width:1200px) {
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+
+   @media (max-width:767.98px) {
+      @include flex-column-block();
+      row-gap: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
+   }
+}
+
+.details__image {
+   -ms-flex-item-align: center;
+   align-self: center;
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 32%;
+   flex: 0 1 32%;
+   height: 100%;
+}
+
+.details__info {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 61%;
+   flex: 0 1 61%;
+   @include flex-column-block();
+
+}
+
+.details__heading {
+   margin-bottom: calc(30px + (62 - 30) * (100vw - 350px) / (1920 - 350));
+
+
+   h2,
+   .details__title {
+      @include title-h2();
+
+      @media (max-width:767.98px) {
+         text-align: center;
+      }
+   }
+
+
+   .details__line {
+
+      @media (max-width:767.98px) {
+         margin: 20px auto 20px auto;
+      }
+   }
+
+   p,
+   .details__text {
+      @include basic-text();
+   }
+}
+
+
+.details__progressbar {}
+
+.progressbar {
+   @include flex-column-block();
+   row-gap: 33px;
+   width: 100%;
+
+   @media (max-width:767.98px) {
+      row-gap: 25px;
+   }
+}
+
+.progressbar__item {
+   @include flex-column-block();
+   row-gap: 14px;
+
+   @media (max-width:767.98px) {
+      row-gap: 8px;
+   }
+}
+
+.progressbar__info {
+   @include flex-row-block();
+   @include jc-sb__ai-c();
+
+   h3,
+   .progressbar__name {
+      @include title-h3();
+      font-size: 1rem;
+      line-height: 144%; //23px
+   }
+
+   p,
+   .progressbar__procent {
+      @include title-h3();
+      font-size: 1rem;
+      line-height: 144%; //23px
+   }
+}
+
+
+
+.progressbar__box {
+   width: 100%;
+   height: 2px;
+   background-color: #ffffff;
+}
+
+.progressbar__skills {
+   //line-height: 40px;
+   background-color: $text-title-color;
+   height: 2px;
+}
+
+.progressbar__skill--1 {
+   width: 80%;
+}
+
+.progressbar__skill--2 {
+   width: 70%;
+}
+
+.progressbar__skill--3 {
+   width: 75%;
+}
+
+.progressbar__skill--4 {
+   width: 40%;
+}
+
+
+
+/* =======================Partners====================== */
+.partners {
+   padding: 0px 10px 0px 10px;
+}
+
+.partners__body {
+   width: 100%;
+}
+
+.partners__images {
+   width: 100%;
+   @include flex-row-block();
+   -webkit-column-gap: 68px;
+   -moz-column-gap: 68px;
+   column-gap: 68px;
+
+   @media (max-width:1200px) {
+      -webkit-column-gap: 30px;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+   }
+
+   @media (max-width:991.98px) {
+      -webkit-column-gap: 10px;
+      -moz-column-gap: 10px;
+      column-gap: 10px;
+   }
+
+   @media (max-width:575.98px) {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   figure,
+   .partner__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+      flex: 0 1 20%;
+
+      @media (max-width:575.98px) {
+         -webkit-box-flex: 0;
+         -ms-flex: 0 1 48.7%;
+         flex: 0 1 48.7%;
+      }
+
+      @media (max-width:575.98px) {
+         -webkit-box-flex: 0;
+         -ms-flex: 0 1 48%;
+         flex: 0 1 48%;
+      }
+   }
+}
+
+
+
+/* ===============About-collection================== */
+
+.about-collection {
+   padding-top: calc(40px + (64 - 40) * (100vw - 350px) / (1920 - 350));
+}
+
+/* ======================================================================== */
+/* =====стили для этой секции см в index.scss  в "collection__cards" */
+.collection__cards {}
+
+.collection__card {}
+
+.card-collection {}
+
+.card-collection__link {}
+
+.card-collection__image {}
+
+.card-collection__description {}
+
+.card-collection__title {}
+
+.card-collection__line {}
+
+.card-collection__text {}

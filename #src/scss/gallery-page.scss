@@ -1,0 +1,194 @@
+/* =====================Breadcrumbs=================== */
+/*====== Стили для breadcrumbs см в _breadcrumbs.scss */
+
+/* =============================Gallery========================= */
+/*=== Эти стили см в index.scss в секции "gallery"===*/
+
+.gallery {}
+
+.gallery__body {}
+
+.gallery__nav {}
+
+.gallery__toggles {}
+
+/* ======================================================= */
+
+/* ============================================================ */
+/*==== Cтили для gallery__cards--1 см в index.scss в секции "gallery" =====*/
+.gallery__cards {}
+
+.gallery__cards--1 {}
+
+.gallery__card {}
+
+.card-gallery-1 {}
+
+.card-gallery-2 {}
+
+.card-gallery-3 {}
+
+.card-gallery-4 {}
+
+.card-gallery-5 {}
+
+.card-gallery__image {}
+
+.living {}
+
+.chair {}
+
+.office {}
+
+.dining {}
+
+.bedroom {}
+
+//================gallery__cards--2================
+.gallery__cards--2 {
+
+   display: grid;
+   grid-template-columns: 26% 26% 43.5%;
+   grid-template-rows: 1fr 1fr;
+   gap: 30px;
+   margin-top: 30px;
+
+   @media (max-width:1200px) {
+      gap: 20px;
+   }
+
+   @media (max-width:991.98px) {
+      grid-template-columns: 1fr 1fr;
+      //grid-template-rows: repeat(3, 33%);
+      grid-template-rows: repeat(3, 430px);
+   }
+
+   @media (max-width:575.98px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 400px);
+      gap: 10px;
+      padding: 0px 10px 0px 10px;
+   }
+
+   @media (max-width:479.98px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 350px);
+   }
+}
+
+.gallery__card {}
+
+.card-gallery-6 {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 2;
+
+   @media (max-width:991.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+
+   @media (max-width:575.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+}
+
+.card-gallery-7 {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+
+   @media (max-width:991.98px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+
+   @media (max-width:575.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+}
+
+.card-gallery-8 {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 2;
+   grid-row-end: 3;
+
+   @media (max-width:991.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+   }
+
+   @media (max-width:575.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+   }
+}
+
+.card-gallery-9 {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 3;
+
+   @media (max-width:991.98px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+   }
+
+   @media (max-width:575.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      grid-row-end: 6;
+   }
+}
+
+.card-gallery-10 {
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+
+   @media (max-width:991.98px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+
+   @media (max-width:575.98px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+   }
+}
+
+.dining {}
+
+.card-gallery__image {}
+
+.bedroom {}
+
+.living {}
+
+.office {}

@@ -1,0 +1,396 @@
+/* =====================Breadcrumbs=================== */
+/*====== Стили для breadcrumbs см в _breadcrumbs.scss */
+
+/* ============================================================ */
+/*==== См стили  в blog-page.scss  =====*/
+
+.blog-page {}
+
+.blog-page__body {}
+
+.blog-page__content {}
+
+
+/* ============================================================ */
+/*==== Cтили для post см в index.scss в секции "Blog" =====*/
+.blog__card {}
+
+.post {}
+
+.post__image {}
+
+.post__description {}
+
+.post__header {}
+
+.secondary-text {}
+
+.post__date {}
+
+.post__mame {}
+
+.post__topic {}
+
+.post__title {}
+
+.title-h3 {}
+
+.post__text {}
+
+.post__btn {}
+
+/* ================================================= */
+//====================================================
+.post__quote {}
+
+.quote-post {
+   padding-top: 40px;
+   padding-bottom: 30px;
+   padding-right: calc(20px + (42 - 20) * (100vw - 350px) / (1920 - 350));
+   padding-left: calc(20px + (42 - 20) * (100vw - 350px) / (1920 - 350));
+
+   .quote-post__body {
+      @include flex-column-block();
+
+      blockquote,
+      .quote-post__text {
+         font-style: italic;
+         font-weight: 300;
+         font-size: 1.5rem;
+         line-height: 158%; //38px   
+         text-align: left;
+         color: $text-title-color;
+      }
+
+      .quote-post__line {
+         @include header-line();
+         margin: 23px 0px 23px 0px;
+      }
+
+      p,
+      .quote-post__author {
+         font-family: $font-f-secondary;
+         font-weight: bold;
+         font-size: 1rem;
+         line-height: 138%; //22px 
+         text-align: left;
+         color: rgba(54, 56, 56, 0.902);
+      }
+   }
+}
+
+//===============Post-tags==============
+.post__tags {}
+
+.tags-post {
+   margin-top: 40px;
+   margin-bottom: 30px;
+
+   h3,
+   .tags-post__title {
+      @include title-h3();
+      font-size: 1rem;
+      line-height: 144%; //23px
+      margin: 0px 0px 14px 0px;
+   }
+}
+
+.tags-post__list {
+   @include flex-row-block();
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   gap: 10px;
+
+   li {
+      padding: 0px 16px 0px 16px;
+      border: 1px solid #45464780;
+      border-radius: 14px;
+      cursor: pointer;
+      @include transition();
+
+      &:focus,
+      &:hover {
+         @include bgr-active();
+         opacity: .7;
+      }
+   }
+
+   a,
+   .tags-post__link {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 200%; //28px    
+      text-align: center;
+      color: #8F8D8D;
+   }
+}
+
+/* ===============Comments================== */
+.comments__body {
+   @include flex-column-block();
+   padding-top: calc(20px + (35 - 20) * (100vw - 350px) / (1920 - 350));
+   border-top: 1px solid #dfdfdf;
+
+   h3,
+   .comments__title {
+      @include title-h3();
+      margin: 0px 0px 16px 0px;
+      font-size: 1.25rem;
+      line-height: 155%; //31px
+   }
+}
+
+.comment__reply {}
+
+.reply-comment {
+   @include flex-row-block();
+   -webkit-column-gap: 13px;
+   -moz-column-gap: 13px;
+   column-gap: 13px;
+   margin: 0px 0px 40px 0px;
+}
+
+.reply-comment__avatar {
+   width: 64;
+   height: 64px;
+
+   img {
+      width: 64px;
+      height: 64px;
+   }
+}
+
+.reply-comment__field {
+   @include flex-column-block();
+   row-gap: 10px;
+}
+
+.reply-comment__header {
+   @include flex-row-block();
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+
+   .reply-comment__person {}
+
+   .person-comment {
+      @include flex-column-block();
+
+      p,
+      .person-comment__name {
+         font-family: $font-f-secondary;
+         font-weight: bold;
+         font-size: 1rem; //16px   
+         line-height: 144%; //23px
+         color: $text-title-color;
+      }
+
+      time,
+      .person-comment__time {
+         font-weight: 400;
+         font-size: 0.875rem;
+         line-height: 200%; //28px   
+         color: #A1A1A1;
+      }
+   }
+
+   button,
+   .reply-comment__btn {
+      padding: 0px 2px 0px 2px;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 200%; //28px      
+      text-align: right;
+      color: #707070;
+
+      &:focus,
+      &:hover {
+         @include bgr-active();
+         opacity: .7;
+      }
+   }
+}
+
+.reply-comment__text {
+   @include basic-text();
+}
+
+.comments__form {}
+
+.form-comment {
+   @include flex-column-block();
+
+   h3,
+   .form-comment__title {
+      @include title-h3();
+      margin: 0px 0px 25px 0px;
+      font-size: 1rem;
+      line-height: 144%; //23px
+   }
+
+   textarea,
+   .form-comment__textarea {
+      padding: 14px 15px 0px 15px;
+      border: 1px solid #DFDFDF;
+      border-radius: 24px;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 200%; //28px   
+      color: $text-title-color;
+
+      &::-webkit-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::-moz-placeholder {
+         color: #A1A1A1;
+      }
+
+      &:-ms-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::-ms-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::placeholder {
+         color: #A1A1A1;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 12px;
+      }
+   }
+
+   .form-comment__field {
+      @include flex-row-block();
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      @media (max-width:575.98px) {
+         @include flex-column-block();
+         gap: 12px;
+      }
+
+      input,
+      .form-comment__input {
+         -webkit-box-flex: 0;
+         -ms-flex: 0 1 49%;
+         flex: 0 1 49%;
+         padding: 5px 15px 7px 15px;
+         border: 1px solid #DFDFDF;
+         border-radius: 24px;
+         font-weight: 400;
+         font-size: 1rem;
+         line-height: 200%; //28px   
+         color: $text-title-color;
+
+         &::-webkit-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::-moz-placeholder {
+            color: #A1A1A1;
+         }
+
+         &:-ms-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::-ms-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::placeholder {
+            color: #A1A1A1;
+         }
+
+         @media (max-width:575.98px) {
+            width: 100%;
+         }
+      }
+   }
+
+   .form-comment__remember {
+      @include flex-row-block();
+      -webkit-column-gap: 11px;
+      -moz-column-gap: 11px;
+      column-gap: 11px;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 150%; //28px   
+      color: #A1A1A1;
+
+      input,
+      .form-comment__checkbox {
+         display: none;
+      }
+
+      span {
+         /* <-- стилизируем новый */
+         height: 21px;
+         width: 21px;
+         border: 1px solid #979797;
+         display: inline-block;
+         position: relative;
+         @include bgr-active();
+         border-radius: 2px;
+         padding: 3px;
+      }
+
+      [type=checkbox]:checked + span:before {
+         /* <-- ставим иконку, когда чекбокс включен  */
+         content: '\2714';
+         position: absolute;
+         top: -5px;
+         left: 0;
+         right: 5px;
+         font-size: 23px;
+         color: black;
+      }
+   }
+
+   button,
+   .form-comment__btn {
+      width: 21.9%;
+      padding: 5px 12px 7px 12px;
+      background: #363838;
+      border-radius: 21px;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 175%; //28px    
+      text-align: center;
+      color: #FFFFF0;
+      @include transition();
+
+      &:focus,
+      &:hover {
+         @include bgr-active();
+         opacity: 0.7;
+         color: $text-title-color;
+      }
+
+      @media (max-width:767.98px) {
+         width: 49%;
+      }
+
+      @media (max-width:479.98px) {
+         width: 100%;
+      }
+   }
+}

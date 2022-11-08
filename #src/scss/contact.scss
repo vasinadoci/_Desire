@@ -1,0 +1,359 @@
+/* =====================Breadcrumbs=================== */
+/*====== Стили для breadcrumbs см в _breadcrumbs.scss */
+
+/* =======================Map==================== */
+.map {}
+
+.map__body {}
+
+/* ================Contacts==================== */
+.contacts {
+   padding-top: calc(40px + (55 - 40) * (100vw - 350px) / (1920 - 350));
+   padding-bottom: calc(40px + (100 - 40) * (100vw - 350px) / (1920 - 350));
+}
+
+.contacts__body {
+   @include flex-column-block();
+}
+
+.contacts__heding {
+   width: 74.3%;
+   -ms-flex-item-align: start;
+   align-self: start;
+
+   @media (max-width:991.98px) {
+      margin: 0px 0px 30px 0px;
+   }
+
+   h2,
+   .contacts__title {
+      @include title-h2();
+   }
+
+   .contacts__line {
+      @include header-line();
+
+
+
+      @media (max-width:575.98px) {
+         margin: 20px 0px 20px 0px;
+      }
+   }
+}
+
+.contacts__info {
+   width: 74.3%;
+   -ms-flex-item-align: end;
+   align-self: flex-end;
+
+   @media (max-width:991.98px) {
+      width: 100%;
+   }
+}
+
+.contacts-social {}
+
+.social-contacts__links {
+   @include flex-row-block();
+   -webkit-column-gap: 20px;
+   -moz-column-gap: 20px;
+   column-gap: 20px;
+
+   &:not(:last-child) {
+      margin-bottom: 20px;
+   }
+
+   li {
+
+      &:focus,
+      &:hover {
+         @include bgr-active();
+         border-radius: 50%;
+         opacity: 1;
+      }
+   }
+
+   a,
+   .social-contact__link {}
+
+   figure,
+   .social-contact__icon {
+      width: 18px;
+      height: 18px;
+   }
+}
+
+.contacts__desc {
+   &:not(:last-child) {
+      margin-bottom: 10px;
+   }
+
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 175%; //28px
+   color: #A1A1A1;
+}
+
+.contacts__address {
+   &:not(:last-child) {
+      margin-bottom: 16px;
+   }
+
+   @include basic-text();
+
+   p {
+      @include basic-text();
+   }
+}
+
+.contacts__email {
+   @include flex-row-block();
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-column-gap: 14px;
+   -moz-column-gap: 14px;
+   column-gap: 14px;
+   margin: 0px 0px 22px 0px;
+
+   &:not(:last-child) {
+      margin-bottom: 24px;
+   }
+
+   figure,
+   .cotacts-email__icon {
+      width: 16px;
+      height: 16px;
+      margin: 6px 0px 0px 0px;
+   }
+
+   p,
+   .cotacts-email__text {}
+}
+
+//=====================================
+.contacts__form {}
+
+.form-contacts {
+
+   textarea,
+   .form-contacts__textarea {
+      width: 100%;
+      padding: 14px 15px 0px 15px;
+      border: 1px solid #DFDFDF;
+      border-radius: 24px;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 200%; //28px   
+      color: $text-title-color;
+
+      &::-webkit-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::-moz-placeholder {
+         color: #A1A1A1;
+      }
+
+      &:-ms-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::-ms-input-placeholder {
+         color: #A1A1A1;
+      }
+
+      &::placeholder {
+         color: #A1A1A1;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 12px;
+      }
+   }
+
+   .form-contacts__field {
+      @include flex-row-block();
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      @media (max-width:575.98px) {
+         @include flex-column-block();
+         gap: 12px;
+      }
+
+      input,
+      .form-contacts__input {
+         -webkit-box-flex: 0;
+         -ms-flex: 0 1 49%;
+         flex: 0 1 49%;
+         padding: 5px 15px 7px 15px;
+         border: 1px solid #DFDFDF;
+         border-radius: 24px;
+         font-weight: 400;
+         font-size: 1rem;
+         line-height: 200%; //28px   
+         color: $text-title-color;
+
+         &::-webkit-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::-moz-placeholder {
+            color: #A1A1A1;
+         }
+
+         &:-ms-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::-ms-input-placeholder {
+            color: #A1A1A1;
+         }
+
+         &::placeholder {
+            color: #A1A1A1;
+         }
+
+         @media (max-width:575.98px) {
+            width: 100%;
+         }
+      }
+   }
+
+   .form-contacts__remember {
+      @include flex-row-block();
+      -webkit-column-gap: 11px;
+      -moz-column-gap: 11px;
+      column-gap: 11px;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 150%; //28px   
+      color: #A1A1A1;
+
+      input,
+      .form-contacts__checkbox {
+         display: none;
+      }
+
+      span {
+         /* <-- стилизируем новый */
+         height: 21px;
+         width: 21px;
+         border: 1px solid #979797;
+         display: inline-block;
+         position: relative;
+         @include bgr-active();
+         border-radius: 2px;
+         padding: 3px;
+      }
+
+      [type=checkbox]:checked + span:before {
+         /* <-- ставим иконку, когда чекбокс включен  */
+         content: '\2714';
+         position: absolute;
+         top: -5px;
+         left: 0;
+         right: 5px;
+         font-size: 23px;
+         color: black;
+      }
+   }
+
+   button,
+   .form-contacts__btn {
+      width: 21.9%;
+      padding: 5px 12px 7px 12px;
+      background: #363838;
+      border-radius: 21px;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 175%; //28px    
+      text-align: center;
+      color: #FFFFF0;
+      @include transition();
+
+      &:focus,
+      &:hover {
+         @include bgr-active();
+         opacity: 0.7;
+         color: $text-title-color;
+      }
+
+      @media (max-width:767.98px) {
+         width: 49%;
+      }
+
+      @media (max-width:479.98px) {
+         width: 100%;
+      }
+   }
+}
+
+/* ===========Collection============= */
+.collection__cards {}
+
+.collection__cards--contact {
+   /* эти стили для collection__cards на странице contact */
+   -webkit-column-gap: 19px;
+   -moz-column-gap: 19px;
+   column-gap: 19px;
+
+   @media(max-width:991.98px) {
+
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0px 0px 40px 0px;
+      padding: 0px 10px 0px 10px;
+   }
+}
+
+/* ==========Общие стили для "collection"( и для "about-collection" в about-page. И для страницы contact)====== */
+.collection__card {}
+
+.card-collection {}
+
+.card-collection__link {}
+
+.card-collection__image {}
+
+.card-collection__description {}
+
+.card-collection__description--contact {
+
+   /* эти стили для card-collection__description на странице contact */
+   h3,
+   .card-collection__title {
+      @include title-h3();
+      font-size: 1rem;
+      line-height: 120%; //24px
+
+      @media(max-width:767.98px) {
+         font-size: 0.875rem;
+         line-height: 100%;
+      }
+   }
+}
+
+.card-collection__title {}
+
+.title-h3 {}
+
+.card-collection__line {}
+
+.card-collection__text {}
+
+.secondary-text {}
+
+/* ================================================== */

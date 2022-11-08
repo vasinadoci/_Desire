@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600,700,300italic" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" />
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Desire</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- Header -->
+      @@include("_header.html",{
+      "link":"3"
+      })
+
+      <!-- Main -->
+      <main class="page">
+         <!-- Breadcrumbs -->
+         <section class="breadcrumbs">
+            <div class="container breadcrumbs__body">
+               <div class="breadcrumbs__links">
+                  <a href="index.html" class="breadcrumbs__link">Home</a>
+                  <a href="blog-page.html" class="breadcrumbs__link">/ Blog</a>
+                  <!--  <a href="post-single-1.html" class="breadcrumbs__link">/ Single post</a> -->
+               </div>
+            </div>
+         </section>
+         <div class="blog-page">
+            <div class="container  blog-page__body">
+
+               <div class="blog-page__content">
+                  <!-- Post -->
+                  <figure class="blog__card  post">
+                     <figure class="post__image">
+                        <img src="./img/posts-images/post-img-2.jpg" alt="room">
+                     </figure>
+                     <figcaption class="post__description">
+                        <div class="post__header  secondary-text">
+                           <time class="post__date" datetime="2020-08-15">August 15, 2020</time>
+                           <span></span>
+                           <p class="post__mame">by Ann Summers</p>
+                           <span></span>
+                           <p class="post__topic">Bedroom Furniture</p>
+                        </div>
+                        <h3 class="post__title  title-h3">Cuckoo for cuckoo bought a hood</h3>
+                        <p class="post__text">Cuckoo bought a hood for a cuckoo, put a hood on a
+                           cuckoo,
+                           how funny he is in the hood. Thirty three
+                           ship laviroavli, tacked but not
+                           fished out. There is a priest on a shock, a cap on the priest, a shock under the priest, a
+                           priest under the cap.
+                           The cuckoo cuckoo bought a hood, the cuckoo put on a hood, how ridiculous he is in a hood.
+                        </p>
+                        <a href="post-single-1.html" class="post__btn">More</a>
+                     </figcaption>
+                  </figure>
+                  <!-- Quote -->
+                  <div class="quote">
+                     <div class="quote__body">
+                        <blockquote class="quote__text">“Simplicity is not the goal. It is the by-product of a good idea
+                           and modest expectations”</blockquote>
+                        <div class="quote__line  header-line"></div>
+                        <p class="quote__author">Paul Rand</p>
+                     </div>
+                  </div>
+                  <!-- Post -->
+                  <figure class="blog__card  post">
+                     <figure class="post__image">
+                        <img src="./img/posts-images/post-img-3.jpg" alt="room">
+                     </figure>
+                     <figcaption class="post__description">
+                        <div class="post__header  secondary-text">
+                           <time class="post__date" datetime="2020-08-15">August 15, 2020</time>
+                           <span></span>
+                           <p class="post__mame">by Ann Summers</p>
+                           <span></span>
+                           <p class="post__topic">Bedroom Furniture</p>
+                        </div>
+                        <h3 class="post__title  title-h3">Red selfies edison bulb four dollar toast humblebrag for the
+                           furniture</h3>
+                        <p class="post__text">Everyday carry actually neutra authentic kogi shabby chic migas small
+                           batch craft beer. Literally williamsburg tote bag
+                           farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage
+                           hammock palo santo godard
+                           thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb
+                           farm-to-table</p>
+                        <a href="post-single-1.html" class="post__btn">More</a>
+                     </figcaption>
+                  </figure>
+                  <!-- Video -->
+                  <figure class="post__video  video-post">
+                     <div class="embed">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FSYnn3CMibU"
+                           title="YouTube video player" frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                           allowfullscreen></iframe>
+                     </div>
+                     <div class="video-post__desc">
+                        <div class="video-post__header  secondary-text">
+                           <time class="video-post__date" datetime="2020-08-12">August 12, 2020</time>
+                           <span></span>
+                           <p class="video-post__mame">by Lux Morningstar</p>
+                           <span></span>
+                           <p class="video-post__topic">Design</p>
+                        </div>
+                        <h3 class="video-post__title  title-h3">Authentic kogi shabby chic</h3>
+                        <a href="post-single-1.html" class="post__btn">More</a>
+                     </div>
+                  </figure>
+
+
+                  <!-- Pagination -->
+                  <ul class="pagination">
+                     <li class="pagination__item"><a href="#" class="pagination__link">&lt</a></li>
+                     <li class="pagination__item"><a href="blog-page.html" class="pagination__link active">1</a></li>
+                     <li class="pagination__item"><a href="blog-page-2.html" class="pagination__link">2</a></li>
+                     <li class="pagination__item"><a href="page-3.html" class="pagination__link">3</a></li>
+                     <li class="pagination__item"><a href="#" class="pagination__link">&gt</a></li>
+                  </ul>
+               </div>
+               <!-- Aside -->
+               @@include("_aside.html",{})
+            </div>
+         </div>
+      </main>
+      <!-- Footer -->
+      @@include("_footer.html",{})
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>
